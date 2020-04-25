@@ -1,19 +1,19 @@
 import 'package:fish_redux/fish_redux.dart';
+import 'package:flutterapp/list/item/state.dart';
 
 class ListState implements Cloneable<ListState> {
 
-  int number;
+  List<ItemState> itemList;//保存item的state
+
 
   @override
   ListState clone() {
     return ListState()
-    ..number = number
+    ..itemList = itemList
     ;
   }
 }
 
 ListState initState(Map<String, dynamic> args) {
-  return ListState()
-  ..number = args['number']
-  ;
+  return ListState();
 }

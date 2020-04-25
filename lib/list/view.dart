@@ -5,24 +5,15 @@ import 'action.dart';
 import 'state.dart';
 
 Widget buildView(ListState state, Dispatch dispatch, ViewService viewService) {
-
-  print("点击：${state.number}");
+  //创建adapter
+  var myListAdapter = viewService.buildAdapter();
   return Scaffold(
-    backgroundColor: Colors.white,
     appBar: AppBar(
-      title: Text('ListView'),
+      title: Text('Adapter'),
     ),
     body: ListView.builder(
-        itemBuilder: (BuildContext context,int index){
-
-          return _listViewWidget(index, state);
-        }
+      itemBuilder: myListAdapter.itemBuilder,
+      itemCount: myListAdapter.itemCount
     ),
-  );
-}
-
-Widget _listViewWidget(int index,ListState state){
-  return InkWell(
-//    child: Text(),
   );
 }
