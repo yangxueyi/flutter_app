@@ -104,7 +104,6 @@ Future<void> receive() async {
 }
 
 void _onEvent(Object event) {
-
   print("ChannelPage: $event");
 }
 
