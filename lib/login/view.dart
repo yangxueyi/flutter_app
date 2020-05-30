@@ -17,6 +17,7 @@ Widget buildView(loginState state, Dispatch dispatch, ViewService viewService) {
             color: Colors.green,
             child: Text(
               "进入",
+
               style: TextStyle(color: Colors.white),
             ),
             onPressed: () {
