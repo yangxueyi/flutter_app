@@ -99,6 +99,7 @@ Future<void> gotoTwo() async {
 Future<void> receive() async {
    const counterPlugin = const EventChannel("com.yxy/xyPlugin2");
    counterPlugin.receiveBroadcastStream().listen(_onEvent,onError: _onError);
+
 }
 
 void _onEvent(Object event) {
